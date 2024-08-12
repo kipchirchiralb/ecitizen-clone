@@ -61,5 +61,48 @@ nav button:hover {
 }
 .register-link:hover {
   color: white;
-  filter: brightness(90%);
+  background-color: rgb(15, 139, 60);
+}
+.accessibility-nav ion-icon {
+  color: rgb(52, 130, 255);
+  font-size: 22px;
+}
+.accessibility-nav button:hover {
+  background-color: transparent;
+}
+
+#mobile-menu-btn {
+  display: none;
+}
+#mobile-logo {
+  display: none;
+}
+
+/* main */
+/* sections */
+
+/* MEDIA QUERIES -- responsive */
+@media (max-width: 1023px) {
+  .desktop-nav,
+  .user-nav {
+    display: none;
+  }
+
+  #mobile-menu-btn {
+    display: block;
+  }
+  #mobile-menu-btn ion-icon {
+    color: rgb(107, 114, 128);
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 540px) {
+  #main-logo {
+    display: none;
+  }
+  #mobile-logo {
+    display: block;
+    height: 55px;
+  }
 }
