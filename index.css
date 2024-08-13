@@ -10,7 +10,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px;
+  padding: 20px 30px;
 }
 nav {
   display: flex;
@@ -79,6 +79,63 @@ nav button:hover {
 }
 
 /* main */
+section {
+  padding: 0px 30px;
+}
+.intro {
+  background-image: url("./images/eCitizen-hero-banner-3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.intro h1 {
+  color: white;
+  margin-top: 70px;
+}
+.glass-bg {
+  padding: 40px 30px 50px 30px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background: rgba(0, 0, 0, 0.54);
+  backdrop-filter: blur(5px);
+}
+#search {
+  background-color: white;
+  padding: 15px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+}
+#search input {
+  border: none;
+  width: 100%;
+  margin-left: 12px;
+}
+#search input::placeholder {
+  font-size: 18px;
+  color: rgb(134, 136, 141);
+}
+#search ion-icon {
+  color: rgb(134, 136, 141);
+  font-size: 20px;
+}
+.services {
+  display: flex;
+  justify-content: space-evenly;
+}
+.services li {
+  flex: 1;
+}
+.services img {
+  display: block;
+  margin: 0 auto;
+}
+.services a {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-size: 14px;
+}
 /* sections */
 
 /* MEDIA QUERIES -- responsive */
@@ -95,6 +152,33 @@ nav button:hover {
     color: rgb(107, 114, 128);
     font-size: 30px;
   }
+  .services {
+    flex-wrap: wrap;
+  }
+  .services li {
+    min-width: 22%;
+  }
+}
+
+@media (max-width: 768px) {
+  .services {
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+  }
+  .services li {
+    min-width: 34%;
+  }
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .services::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .services {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  /* Explore browser compatibility  ----- mos, webkit */
 }
 
 @media (max-width: 540px) {
